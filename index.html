@@ -10,7 +10,10 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
-    <script src="https://kit.fontawesome.com/d1c2ea8b80.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/d1c2ea8b80.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- ============  CSS  ============ -->
     <style>
@@ -134,7 +137,10 @@
               My <span class="todo-items-heading-subpart">Tasks</span>
             </h1>
 
-            <ul class="todo-items-container list-unstyled" id="todoItemsContainer"></ul>
+            <ul
+              class="todo-items-container list-unstyled"
+              id="todoItemsContainer"
+            ></ul>
             <button class="button" id="saveTodoButton">Save</button>
           </div>
         </div>
@@ -242,13 +248,16 @@
         labelElement.id = labelId;
         labelElement.classList.add("checkbox-label");
         labelElement.textContent = todo.text;
+
         if (todo.isChecked) {
           labelElement.classList.add("checked");
         }
+
         labelContainer.appendChild(labelElement);
 
+        /* ✅ FIXED DELETE ICON */
         const deleteIcon = document.createElement("i");
-        deleteIcon.classList.add("far", "fa-trash-alt", "delete-icon");
+        deleteIcon.classList.add("fas", "fa-trash-alt", "delete-icon");
         deleteIcon.onclick = function () {
           onDeleteTodo(todoId);
         };
